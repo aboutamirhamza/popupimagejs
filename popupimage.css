@@ -1,0 +1,79 @@
+/* * {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,ol {
+    list-style-type: none;
+} */
+
+.clicked{
+    padding: 10px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.imageview {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: zooming 01s forwards;
+    -webkit-animation: zooming 01s forwards;
+}
+
+.imageview:active{
+    transition: all linear 6s;
+    -webkit-transition: all linear 6s;
+    -moz-transition: all linear 6s;
+    -ms-transition: all linear 6s;
+    -o-transition: all linear 6s;
+    animation: fadeout 6s forwards;
+    -webkit-animation: fadeout 6s forwards;
+}
+
+@keyframes fadeout {
+    100%{opacity: 100%;}
+    90%{opacity: 90%;}
+    80%{opacity: 80%;}
+    70%{opacity: 70%;}
+    60%{opacity: 60%;}
+    50%{opacity: 50%;}
+    40%{opacity: 40%;}
+    30%{opacity: 30%;};
+    20%{opacity: 20%;};
+    10%{opacity: 10%;};
+    0%{opacity: 0;};
+}
+
+
+@keyframes zooming {
+    0%{opacity: 0;};
+    50%{opacity: 50%;};
+    100%{opacity: 100%;}
+}
+
+
+.imageview img {
+    width: 800px;
+    height: 800px;
+    object-fit: cover;
+    display: inline-block;
+}
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 24px;
+    color: #fff;
+}
